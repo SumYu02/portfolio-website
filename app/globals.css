@@ -1,5 +1,3 @@
 @import "tailwindcss";
 
-* {
-  font-family: Outfit;
-}
+/* Removed the global font-family override to allow individual font classes to work */

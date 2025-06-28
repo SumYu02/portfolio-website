@@ -15,6 +15,7 @@ export default {
       fontFamily: {
         Outfit: ["Outfit", "sans-serif"],
         Ovo: ["Ovo", "serif"],
+        times: ["Times New Roman", "Times", "serif"],
       },
     },
   },
