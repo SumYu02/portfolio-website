@@ -1,6 +1,8 @@
+"use client";
 import { assets } from "@/assets/assets";
 import React, { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const sideMenuRef = useRef();
@@ -24,11 +26,14 @@ const Navbar = () => {
       <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-center z-50">
         <div className="flex items-center justify-between w-full max-w-7xl">
           <a href="#top">
-            <Image
+            {/* <Image
               src={assets.logo}
               alt="logo"
               className="w-28 cursor-pointer"
-            />
+            /> */}
+            <h1 className="text-3xl font-bold text-gray-800 dark:text-white font-sans">
+              Sum Yu<span className="text-red-700 text-3xl">.</span>
+            </h1>
           </a>
 
           <ul className="hidden md:flex items-center gap-6 lg:gap-8 px-12 py-5 bg-white/40 rounded-full shadow-sm">
@@ -39,10 +44,10 @@ const Navbar = () => {
               <a href="#about">About Me</a>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <a href="#projects">My Project</a>
             </li>
             <li>
-              <a href="#projects">My Project</a>
+              <Link href="/keysound">KeySound</Link>
             </li>
             <li>
               <a href="#contact">Contact Me</a>
@@ -89,14 +94,14 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#services" onClick={closeMenu}>
-                Services
-              </a>
-            </li>
-            <li>
               <a href="#projects" onClick={closeMenu}>
                 My Project
               </a>
+            </li>
+            <li>
+              <Link href="/keysound" onClick={closeMenu}>
+                KeySound
+              </Link>
             </li>
             <li>
               <a href="#contact" onClick={closeMenu}>

@@ -36,6 +36,24 @@ import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 import picofme_image from "./picofme.png";
+import keysound_user from "./keysound-user.png";
+import keysound_user_page1 from "./keysound-page1.png";
+import keysound_user_page2 from "./keysound-page2.png";
+import keysound_user_page3 from "./keysound-page3.png";
+import keysound_user_page4 from "./keysound-page4.png";
+import keysound_user_page5 from "./keysound-page5.png";
+import keysound_user_page6 from "./keysound-page6.png";
+import keysound_user_page7 from "./keysound-page7.png";
+import keysound_user_page8 from "./keysound-page8.png";
+import keysound_user_page9 from "./keysound-page9.png";
+import keysound_user_page10 from "./keysound-page10.png";
+import keysound_admin_page1 from "./keysound-admin-page1.png";
+import keysound_admin_page2 from "./keysound-admin-page2.png";
+import keysound_admin_page3 from "./keysound-admin-page3.png";
+import keysound_admin_page4 from "./keysound-admin-page4.png";
+import keysound_admin_page5 from "./keysound-admin-page5.png";
+import keysound_admin_page6 from "./keysound-admin-page6.png";
+import keysound_admin_page7 from "./keysound-admin-page7.png";
 
 export const assets = {
   user_image,
@@ -76,6 +94,24 @@ export const assets = {
   right_arrow_bold,
   right_arrow_bold_dark,
   picofme_image,
+  keysound_user,
+  keysound_user_page1,
+  keysound_user_page2,
+  keysound_user_page3,
+  keysound_user_page4,
+  keysound_user_page5,
+  keysound_user_page6,
+  keysound_user_page7,
+  keysound_user_page8,
+  keysound_user_page9,
+  keysound_user_page10,
+  keysound_admin_page1,
+  keysound_admin_page2,
+  keysound_admin_page3,
+  keysound_admin_page4,
+  keysound_admin_page5,
+  keysound_admin_page6,
+  keysound_admin_page7,
 };
 
 export const workData = [
@@ -135,13 +171,14 @@ export const infoList = [
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
     title: "Languages",
-    description: "HTML, CSS, JavaScript React Js, Next Js",
+    description:
+      "HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Tailwind CSS, Bootstrap, Node.js, Django REST Framework, React Native, C++, Java, Python, MySQL, SQL Plus, MongoDB",
   },
   {
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
     title: "Education",
-    description: "B.Tech in Computer Science",
+    description: "Universiti Tunku Abdul Rahman (UTAR)",
   },
   {
     icon: assets.project_icon,

@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { assets } from "@/assets/assets";
+import { assets, toolsData } from "@/assets/assets";
 import { infoList } from "@/assets/assets";
 
 const About = () => {
   return (
-    <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
+    <div id="about" className="w-full px-[12%] sm:pt-10 scroll-mt-20">
       <h4 className="text-center text-lg mb-2">Introduction</h4>
       <h2 className="text-4xl text-center font-bold ">About Me</h2>
 
@@ -28,7 +28,7 @@ const About = () => {
                 key={index}
                 className="border rounded-xl p-6 cursor-pointer border-[0.5px] hover:bg-gray-100 hover:-translate-y-1 transition-all duration-300 hover:shadow-md "
               >
-                <Image src={icon} alt={title} />
+                <Image src={icon} alt={title} className="w-7" />
                 <h3 className="text-gray-700 my-4">{title}</h3>
                 <p className="text-gray-600 text-sm">{description}</p>
               </li>
