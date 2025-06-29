@@ -54,6 +54,16 @@ import keysound_admin_page4 from "./keysound-admin-page4.png";
 import keysound_admin_page5 from "./keysound-admin-page5.png";
 import keysound_admin_page6 from "./keysound-admin-page6.png";
 import keysound_admin_page7 from "./keysound-admin-page7.png";
+import pomotask_page1 from "./pomodoro1.png";
+import pomotask_page2 from "./pomodoro2.png";
+import pomotask_page3 from "./pomodoro3.png";
+import pomotask_page4 from "./pomodoro4.png";
+import pomotask_page5 from "./pomodoro5.png";
+import pomotask_page6 from "./pomodoro6.png";
+import react_native_logo from "./React-native-2-logo.png";
+import firebase_logo from "./firebase-logo.png";
+import cursor_logo from "./cursor-logo.png";
+import pomodoro_logo from "./pomodoro-logo.jpg";
 
 export const assets = {
   user_image,
@@ -112,6 +122,16 @@ export const assets = {
   keysound_admin_page5,
   keysound_admin_page6,
   keysound_admin_page7,
+  pomotask_page1,
+  pomotask_page2,
+  pomotask_page3,
+  pomotask_page4,
+  pomotask_page5,
+  pomotask_page6,
+  cursor_logo,
+  react_native_logo,
+  firebase_logo,
+  pomodoro_logo,
 };
 
 export const workData = [

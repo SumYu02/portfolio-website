@@ -13,10 +13,10 @@ const projects = [
     path: "/keysound",
   },
   {
-    title: "External Project",
-    description: "An external project.",
-    image: assets.keysound_user,
-    url: "https://external-link.com",
+    title: "Pomotask",
+    description: "Study Planner & Task Manager with Pomodoro Application.",
+    image: assets.pomodoro_logo,
+    path: "/pomotask",
   },
   // Add more projects here
 ];
@@ -24,7 +24,7 @@ const projects = [
 const MyProject = () => {
   return (
     <div
-      className="w-full px-[12%] pt-10 scroll-mt-20 justify-center items-center"
+      className="w-full px-[12%] pt-10 scroll-mt-20 justify-center items-center mb-20"
       id="projects"
     >
       <h4 className="text-center mb-2 text-lg">My Portfolio</h4>
@@ -48,7 +48,7 @@ const MyProject = () => {
                 href={project.path}
                 className="text-2xl font-bold hover:text-blue-600 transition-colors cursor-pointer"
               >
-                {project.title}
+                <span className="font-sans">{project.title}</span>
               </Link>
             ) : project.url ? (
               <a
@@ -57,7 +57,7 @@ const MyProject = () => {
                 rel="noopener noreferrer"
                 className="text-2xl font-bold hover:text-blue-600 transition-colors cursor-pointer"
               >
-                {project.title}
+                <span className="font-sans">{project.title}</span>
               </a>
             ) : (
               <h2 className="text-2xl font-bold">{project.title}</h2>
