@@ -23,7 +23,10 @@ const projects = [
 
 const MyProject = () => {
   return (
-    <div className="w-full px-[12%] pt-10 scroll-mt-20" id="projects">
+    <div
+      className="w-full px-[12%] pt-10 scroll-mt-20 justify-center items-center"
+      id="projects"
+    >
       <h4 className="text-center mb-2 text-lg">My Portfolio</h4>
       <h2 className="text-center text-4xl font-bold mb-10">
         My Latest Projects

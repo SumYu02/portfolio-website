@@ -31,7 +31,7 @@ const Navbar = () => {
               alt="logo"
               className="w-28 cursor-pointer"
             /> */}
-            <h1 className="text-3xl font-bold text-gray-800 dark:text-white font-sans">
+            <h1 className="text-3xl font-bold text-gray-800 font-sans">
               Sum Yu<span className="text-red-700 text-3xl">.</span>
             </h1>
           </a>
@@ -46,20 +46,20 @@ const Navbar = () => {
             <li>
               <a href="#projects">My Project</a>
             </li>
-            <li>
+            {/* <li>
               <Link href="/keysound">KeySound</Link>
-            </li>
+            </li> */}
             <li>
               <a href="#contact">Contact Me</a>
             </li>
           </ul>
 
           <div className="flex items-center gap-6">
-            <button className="flex items-center">
+            {/* <button className="flex items-center">
               <Image src={assets.moon_icon} alt="" className="w-6" />
-            </button>
+            </button> */}
             <a
-              href="#contact"
+              href="https://api.whatsapp.com/send?phone=60194883347"
               className="hidden lg:flex items-center gap-3 border-gray-300 rounded-full border px-8 py-3"
             >
               Contact Me

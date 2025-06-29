@@ -9,7 +9,7 @@ const About = () => {
       <h4 className="text-center text-lg mb-2">Introduction</h4>
       <h2 className="text-4xl text-center font-bold ">About Me</h2>
 
-      <div className="flex flex-col md:flex-row gap-4 gap-20 my-20">
+      <div className="flex flex-col md:flex-row gap-10 sm:gap-20 my-10 sm:my-20 justify-center items-center">
         <div className="w-64 sm:w-96 max-w-none">
           <Image src={assets.picofme_image} alt="about me" className="w-full" />
         </div>

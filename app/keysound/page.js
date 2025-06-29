@@ -140,7 +140,7 @@ export default function KeysoundPage() {
           className="flex flex-row gap-3 items-center px-4 py-2 rounded-full bg-gray-200"
         >
           <FaArrowLeft />
-          Back to Home
+          <span className="hidden sm:inline">Back to Home</span>
         </Link>
       </div>
 
@@ -148,7 +148,7 @@ export default function KeysoundPage() {
         <h1 className="text-4xl font-bold">KeySound</h1>
       </div>
 
-      <div className="flex flex-col gap-2 mt-10  ml-6">
+      <div className="flex flex-col gap-2 mt-10 sm:ml-6">
         <p className="font-bold mt-2">Individual Project</p>
         <p className="text-gray-600 max-w-7xl text-justify">
           This project aims to address these gaps by developing an enhanced
@@ -163,7 +163,7 @@ export default function KeysoundPage() {
       </div>
 
       <div className="flex flex-col gap-2 mt-14">
-        <h1 className="text-3xl font-bold text-center text-gray-600 mb-5">
+        <h1 className="text-2xl sm:text-3xl font-bold text-center text-gray-600 mb-5">
           User Website
         </h1>
 
@@ -185,14 +185,14 @@ export default function KeysoundPage() {
               onClick={prevSlide}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-all duration-300"
             >
-              <FaChevronLeft size={20} />
+              <FaChevronLeft className="size-3 sm:size-6" />
             </button>
 
             <button
               onClick={nextSlide}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-all duration-300"
             >
-              <FaChevronRight size={20} />
+              <FaChevronRight className="size-3 sm:size-6" />
             </button>
           </div>
 
@@ -226,7 +226,7 @@ export default function KeysoundPage() {
       </div>
 
       <div className="flex flex-col gap-2 mt-20">
-        <h1 className="text-3xl font-bold text-center text-gray-600 mb-5">
+        <h1 className="text-2xl sm:text-3xl font-bold text-center text-gray-600 mb-5">
           Admin Website
         </h1>
 
@@ -242,13 +242,13 @@ export default function KeysoundPage() {
               onClick={prevSlideAdmin}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-all duration-300"
             >
-              <FaChevronLeft size={20} />
+              <FaChevronLeft className="size-3 sm:size-6" />
             </button>
             <button
               onClick={nextSlideAdmin}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-all duration-300"
             >
-              <FaChevronRight size={20} />
+              <FaChevronRight className="size-3 sm:size-6" />
             </button>
 
             <div className="flex justify-center mt-6 gap-2">
@@ -281,7 +281,7 @@ export default function KeysoundPage() {
         </div>
 
         <div className="flex flex-col gap-2 mt-20 mb-20">
-          <h1 className="text-3xl font-bold text-center text-gray-600 mb-5">
+          <h1 className="text-2xl sm:text-3xl font-bold text-center text-gray-600 mb-5">
             Github Repository
           </h1>
           <Link
