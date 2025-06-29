@@ -157,8 +157,8 @@ export default function KeysoundPage() {
           Website and an Admin Website. The key features implemented in this
           project include a recommendation system to personalize product
           suggestions, an AI chatbot for customer support, a price-drop watch
-          function to notify users of changes and a "make offer" function that
-          allows users to negotiate prices directly with sellers.{" "}
+          function to notify users of changes and a &ldquo;make offer&rdquo;
+          function that allows users to negotiate prices directly with sellers.{" "}
         </p>
       </div>
 
