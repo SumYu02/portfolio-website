@@ -148,13 +148,13 @@ const Pomotask = () => {
           <ol className="max-w-4xl mx-auto list-decimal list-inside text-gray-700 text-justify leading-relaxed mb-4">
             <li>
               <strong>Task Management</strong> – subject tags, priority flags,
-              due-date alerts, and a live "To-do / In-progress / Done" board
-              synchronized across devices.
+              due-date alerts, and a live &ldquo;To-do / In-progress /
+              Done&rdquo; board synchronized across devices.
             </li>
             <li>
               <strong>Study Planner</strong> – drag-and-drop daily/weekly
-              schedules that integrate with the device's native calendar and
-              warn of session clashes.
+              schedules that integrate with the device&apos;s native calendar
+              and warn of session clashes.
             </li>
             <li>
               <strong>Pomodoro Timer & Analytics</strong> – user-configurable
