@@ -64,6 +64,7 @@ import react_native_logo from "./React-native-2-logo.png";
 import firebase_logo from "./firebase-logo.png";
 import cursor_logo from "./cursor-logo.png";
 import pomodoro_logo from "./pomodoro-logo.jpg";
+import portfolio_image from "./portfolio-image.png";
 
 export const assets = {
   user_image,
@@ -132,6 +133,7 @@ export const assets = {
   react_native_logo,
   firebase_logo,
   pomodoro_logo,
+  portfolio_image,
 };
 
 export const workData = [

@@ -18,6 +18,13 @@ const projects = [
     image: assets.pomodoro_logo,
     path: "/pomotask",
   },
+  {
+    title: "Portfolio Website",
+    description:
+      "Built with modern web technologies to highlight projects, resume, and contact information.",
+    image: assets.portfolio_image,
+    path: "/pomotask",
+  },
   // Add more projects here
 ];
 
