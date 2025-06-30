@@ -45,13 +45,15 @@ const Portfolio = () => {
         </div>
         <div className="mt-6">
           <p className="text-gray-600 text-md text-justify max-w-4xl mx-auto">
-            This portfolio website does not integrate any external APIs and is
-            built purely with React and Tailwind CSS. It serves as a personal
-            project to deepen my understanding of component-based development
-            and responsive design using modern frontend technologies. The focus
-            is on clean UI, modular structure, and gaining hands-on experience
-            with the React and Tailwind CSS ecosystem.Additionally, it serves as
-            a showcase for projects I have previously contributed to.
+            This portfolio website is built entirely with React and Tailwind
+            CSS, with a minimal integration of external APIs. Specifically, it
+            connects to the Web3Forms API to handle contact form submissions
+            without the need for a backend. The project was created to deepen my
+            understanding of component-based development and responsive design
+            using modern frontend technologies. It emphasizes clean UI, a
+            modular structure, and hands-on experience with the React and
+            Tailwind CSS ecosystem. Additionally, the site showcases projects I
+            have previously contributed to.
           </p>
         </div>
       </div>
