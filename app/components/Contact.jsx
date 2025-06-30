@@ -38,7 +38,7 @@ const Contact = () => {
           to get back to you!
         </p>
         <form className="max-w-2xl mx-auto " onSubmit={onSubmit}>
-          <div className="grid grid-cols-auto gap-6 mt-10 mb-8">
+          <div className="grid sm:grid-cols-2 gap-6 mt-10 mb-8">
             <input
               type="text"
               placeholder="Enter your name"
