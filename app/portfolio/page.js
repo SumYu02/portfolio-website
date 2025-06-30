@@ -25,9 +25,10 @@ const Portfolio = () => {
             This site is powered by{" "}
             <span className="font-semibold">Next.js</span>,{" "}
             <span className="font-semibold">React</span>, and styled with{" "}
-            <span className="font-semibold">Tailwind CSS</span>. It’s designed
-            to be fast, responsive, and easy to navigate—whether you're checking
-            out my work, downloading my resume, or reaching out to connect.
+            <span className="font-semibold">Tailwind CSS</span>. It&apos;s
+            designed to be fast, responsive, and easy to navigate—whether you're
+            checking out my work, downloading my resume, or reaching out to
+            connect.
           </p>
         </div>
 
