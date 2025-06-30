@@ -65,6 +65,7 @@ import firebase_logo from "./firebase-logo.png";
 import cursor_logo from "./cursor-logo.png";
 import pomodoro_logo from "./pomodoro-logo.jpg";
 import portfolio_image from "./portfolio-image.png";
+import code_structure from "./code_structure.png";
 
 export const assets = {
   user_image,
@@ -134,6 +135,7 @@ export const assets = {
   firebase_logo,
   pomodoro_logo,
   portfolio_image,
+  code_structure,
 };
 
 export const workData = [

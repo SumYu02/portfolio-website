@@ -23,7 +23,7 @@ const projects = [
     description:
       "Built with modern web technologies to highlight projects, resume, and contact information.",
     image: assets.portfolio_image,
-    path: "/pomotask",
+    path: "/portfolio",
   },
   // Add more projects here
 ];

@@ -99,11 +99,6 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <Link href="/keysound" onClick={closeMenu}>
-                KeySound
-              </Link>
-            </li>
-            <li>
               <a href="#contact" onClick={closeMenu}>
                 Contact Me
               </a>
