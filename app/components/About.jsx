@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { assets, toolsData } from "@/assets/assets";
 import { infoList } from "@/assets/assets";
+import { Progress, Flex } from "@mantine/core";
+import { FaReact } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -10,30 +12,24 @@ const About = () => {
       <h2 className="text-4xl text-center font-bold ">About Me</h2>
 
       <div className="flex flex-col md:flex-row gap-10 sm:gap-20 my-10 sm:my-20 justify-center items-center">
-        <div className="w-64 sm:w-96 max-w-none">
-          <Image src={assets.picofme_image} alt="about me" className="w-full" />
-        </div>
         <div className="flex-1 max-w-2xl">
-          <p className="mb-10">
-            I am a recent Computer Science graduate from Universiti Tunku Abdul
-            Rahman (UTAR). Proficient in both front-end and back-end
-            technologies, with hands-on experience gained through internship and
-            academic projects. I bring strong problem-solving skills and a
-            passion for building efficient, scalable, and user-friendly web
-          </p>
+          <Flex justify="center" align="center" mt={10} w="100%" gap={10}>
+            <FaReact className="w-12 h-12" />
+            <Progress radius="md" size="sm" color="pink" value={65} w="50%" />
+          </Flex>
 
-          <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 mx-auto">
-            {infoList.map(({ icon, iconDark, title, description }, index) => (
-              <li
-                key={index}
-                className="border rounded-xl p-6 cursor-pointer border-[0.5px] hover:bg-gray-100 hover:-translate-y-1 transition-all duration-300 hover:shadow-md "
-              >
-                <Image src={icon} alt={title} className="w-7" />
-                <h3 className="text-gray-700 my-4">{title}</h3>
-                <p className="text-gray-600 text-sm">{description}</p>
-              </li>
-            ))}
-          </ul>
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mx-auto">
+            <div className="flex flex-row gap-2 justify-center items-center">
+              <FaReact className="w-12 h-12" />
+              <Progress
+                radius="md"
+                size="sm"
+                color="pink"
+                value={50}
+                w="100%"
+              />
+            </div>
+          </div> */}
         </div>
       </div>
     </div>
