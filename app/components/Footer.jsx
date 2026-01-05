@@ -18,7 +18,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center mt-12 sm:flex justify-between border-t border-gray-400 mx-[10%] py-6">
-        <p>© 2025 Sum Yu. All rights reserved.</p>
+        <p>© 2026 Sum Yu. All rights reserved.</p>
         <ul className="flex gap-10 items-center justify-center mt-4 sm:mt-0">
           <li>
             <a target="_blank" href="https://github.com/SumYu02">

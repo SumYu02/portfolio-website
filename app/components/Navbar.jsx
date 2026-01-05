@@ -49,8 +49,11 @@ const Navbar = () => {
             {/* <li>
               <Link href="/keysound">KeySound</Link>
             </li> */}
-            <li>
+            {/* <li>
               <a href="#contact">Contact Me</a>
+            </li> */}
+              <li>
+              <a href="#contact">Experience</a>
             </li>
           </ul>
 

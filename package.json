@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mantine/core": "^8.3.9",
+    "@mantine/hooks": "^8.3.9",
     "@tailwindcss/postcss": "^4.1.11",
     "next": "15.3.8",
     "react": "^19.0.0",

@@ -17,14 +17,12 @@ const Header = () => {
           <Image src={assets.hand_icon} alt="" className="w-6 mb-2" />
         </h3>
         <h1 className="max-w-2xl mx-auto text-3xl sm:text-6xl lg:text-[62px] ">
-          I'm a fresh graduate seeking a front-end or full-stack role.
+          I'm a Junior Full Stack Developer.
         </h1>
         <p className="max-w-2xl mx-auto text-lg text-justify">
-          I am a recent Computer Science graduate from Universiti Tunku Abdul
-          Rahman (UTAR). Proficient in both front-end and back-end technologies,
-          with hands-on experience gained through internship and academic
-          projects. I bring strong problem-solving skills and a passion for
-          building efficient, scalable, and user-friendly web applications.
+          Hello! This is my portfolio where I showcase my full-stack development
+          projects. Take a look at my work below—I'm actively seeking a role
+          where I can build more innovative web applications.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
           <a
