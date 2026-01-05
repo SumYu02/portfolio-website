@@ -98,6 +98,12 @@ const MyProject = () => {
           </div>
         ))}
       </div>
+      
+      <div className="flex justify-center items-center">
+      <Link href="/myproject" className=" hover:underline text-blue-600 hover:text-blue-800  cursor-pointer mt-4 inline-block  px-6 py-2 rounded-full text-center ">
+        View All Projects
+      </Link>
+      </div>
     </div>
   );
 };

@@ -1,8 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import { assets, toolsData } from "@/assets/assets";
-import { infoList } from "@/assets/assets";
-import { Progress, Flex } from "@mantine/core";
 import { FaPython, FaJava, FaReact, FaNode, FaDatabase } from "react-icons/fa";
 import {
   SiJavascript,
@@ -12,7 +8,6 @@ import {
   SiCss3,
   SiBootstrap,
   SiTailwindcss,
-  SiNextdotjs,
   SiDjango,
   SiMysql,
   SiMongodb,
