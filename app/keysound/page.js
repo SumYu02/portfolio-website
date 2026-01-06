@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import Navbar from "../components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { FaArrowLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Font Awesome icon
 import { useState } from "react";
+import NavbarPage from "../components/NavbarPage";
 
 export default function KeysoundPage() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -134,7 +134,8 @@ export default function KeysoundPage() {
 
   return (
     <>
-      <div className="w-full px-[12%] pt-10 ml-2 scroll-mt-20">
+      <NavbarPage />
+      <div className="w-full px-[12%] ml-2 scroll-mt-20 pt-20">
         <div className="flex justify-end">
           <Link
             href="/"

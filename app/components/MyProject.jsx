@@ -3,6 +3,7 @@ import React from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import Link from "next/link";
+import { CiCircleChevDown } from "react-icons/ci";
 
 const projects = [
   {
@@ -13,16 +14,16 @@ const projects = [
     path: "/keysound",
   },
   {
-    title: "Pomotask",
-    description: "Study Planner & Task Manager with Pomodoro Application.",
-    image: assets.pomodoro_logo,
-    path: "/pomotask",
+    title: "Score Board",
+    description: "A simple typing game with a scoreboard, user profiles, and history.",
+    image: assets.scoreboard_page1,
+    path: "/scoreboard",
   },
   {
-    title: "Portfolio Website",
+    title: "Fancy",
     description:
-      "Built with modern web technologies to highlight projects, resume, and contact information.",
-    image: assets.portfolio_image,
+      "A token swap interface that allows users to exchange assets quickly and easily.",
+    image: assets.fancy_page1,
     path: "/portfolio",
   },
   // Add more projects here
@@ -47,7 +48,7 @@ const MyProject = () => {
             <Image
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover rounded-lg"
+              className="w-full h-48 object-contain rounded-lg"
             />
 
             {project.path ? (
@@ -101,9 +102,10 @@ const MyProject = () => {
       
       <div className="flex justify-center items-center">
       <Link href="/myproject" className=" hover:underline text-blue-600 hover:text-blue-800  cursor-pointer mt-4 inline-block  px-6 py-2 rounded-full text-center ">
-        View All Projects
+      <CiCircleChevDown className="w-12 h-12 text-slate-700 animate-bounce mx-auto mt-4" />
       </Link>
       </div>
+   
     </div>
   );
 };

@@ -7,9 +7,10 @@ const Header = () => {
     <div className="md:pt-25 mx-auto h-screen flex flex-col gap-4 items-center justify-center max-w-3xl w-11/12">
       <div className="flex flex-col justify-center items-center gap-2 sm:gap-4 ">
         <Image
-          src={assets.picofme_image}
-          alt=""
-          className="rounded-full w-36"
+          // src={assets.picofme_image}
+          src={assets.profile_image_animated}
+          alt="profile image"
+          className="rounded-full w-38"
         />
 
         <h3 className=" flex items-end gap-2 text-xl md:text-2xl ">
