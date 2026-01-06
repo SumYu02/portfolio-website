@@ -28,7 +28,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="w-full px-[12%] py-10 scroll-mt-20">
+    <div id="contact" className="w-full sm:px-[12%] py-5 sm:py-10 scroll-mt-20">
       <div className="w-full px-[12%] pt-10 ml-2 scroll-mt-20 flex-1">
         <h1 className="text-center text-lg mb-2 ">Connect with me</h1>
         <p className="text-center text-5xl">Get in touch</p>

@@ -14,19 +14,6 @@ const projects = [
     path: "/keysound",
   },
   {
-    title: "Pomotask",
-    description: "Study Planner & Task Manager with Pomodoro Application.",
-    image: assets.pomodoro_logo,
-    path: "/pomotask",
-  },
-  {
-    title: "Portfolio Website",
-    description:
-      "Built with modern web technologies to highlight projects, resume, and contact information.",
-    image: assets.portfolio_image,
-    path: "/portfolio",
-  },
-  {
     title: "Score Board",
     description:
       "A simple typing game with a scoreboard, user profiles, and history.",
@@ -40,6 +27,19 @@ const projects = [
     image: assets.fancy_page1,
     path: "/portfolio",
   },
+  {
+    title: "Pomotask",
+    description: "Study Planner & Task Manager with Pomodoro Application.",
+    image: assets.pomodoro_logo,
+    path: "/pomotask",
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "Built with modern web technologies to highlight projects, resume, and contact information.",
+    image: assets.portfolio_image,
+    path: "/portfolio",
+  },
 ];
 
 const page = () => {
@@ -47,7 +47,7 @@ const page = () => {
     <>
       <NavbarPage />
       <div
-        className="w-full px-[12%] pt-10 scroll-mt-20 justify-center items-center mb-20"
+        className="w-full px-[12%] pt-20 scroll-mt-20 justify-center items-center mb-20"
         id="projects"
       >
         <h4 className="text-center mb-2 text-lg">My Portfolio</h4>
@@ -113,15 +113,6 @@ const page = () => {
               )}
             </div>
           ))}
-        </div>
-
-        <div className="flex justify-center items-center">
-          <Link
-            href="/myproject"
-            className=" hover:underline text-blue-600 hover:text-blue-800  cursor-pointer mt-4 inline-block  px-6 py-2 rounded-full text-center "
-          >
-            View All Projects
-          </Link>
         </div>
       </div>
     </>

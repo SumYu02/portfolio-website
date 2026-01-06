@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="md:pt-25 mx-auto h-screen flex flex-col gap-4 items-center justify-center max-w-3xl w-11/12">
-      <div className="flex flex-col justify-center items-center gap-2 sm:gap-4 ">
+    <div className="sm:pt-25 mx-auto h-screen flex flex-col gap-4 items-center justify-center max-w-3xl w-11/12">
+      <div className="flex flex-col justify-center items-center gap-4 sm:gap-4 ">
         <Image
           // src={assets.picofme_image}
           src={assets.profile_image_animated}

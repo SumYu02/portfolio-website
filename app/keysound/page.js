@@ -2,10 +2,24 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { assets } from "@/assets/assets";
-import { FaArrowLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Font Awesome icon
 import { useState } from "react";
+import { assets } from "@/assets/assets";
 import NavbarPage from "../components/NavbarPage";
+import {
+  FaArrowLeft,
+  FaChevronLeft,
+  FaChevronRight,
+  FaReact,
+  FaNode,
+} from "react-icons/fa"; // Font Awesome icon
+import {
+  SiMysql,
+  SiMongodb,
+  SiPrisma,
+  SiExpress,
+  SiReact,
+  SiNodejs,
+} from "react-icons/si";
 
 export default function KeysoundPage() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -102,6 +116,13 @@ export default function KeysoundPage() {
     },
   ];
 
+  const skills = [
+    { name: "MongoDB", icon: <SiMongodb />, color: "text-blue-600" },
+    { name: "Express.js", icon: <SiExpress />, color: "text-slate-700" },
+    { name: "React.js", icon: <FaReact />, color: "text-blue-400" },
+    { name: "Node.js", icon: <FaNode />, color: "text-green-600" },
+  ];
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
@@ -142,7 +163,7 @@ export default function KeysoundPage() {
             className="flex flex-row gap-3 items-center px-4 py-2 rounded-full bg-gray-200"
           >
             <FaArrowLeft />
-            <span className="hidden sm:inline">Back to Home</span>
+            {/* <span className="hidden sm:inline">Back to Home</span> */}
           </Link>
         </div>
 
@@ -165,6 +186,54 @@ export default function KeysoundPage() {
           </p>
         </div>
 
+        {/* <div className="flex flex-col gap-2 mt-14">
+          <h1 className="text-2xl sm:text-3xl font-bold text-center text-gray-600 mb-5">
+            Skills Used
+          </h1>
+          <div className="flex flex-wrap gap-2">
+            {skills.map((skill, index) => (
+              <div key={index} className={`${skill.color} p-2 rounded-full`}>
+                {skill.icon}
+                <span className="text-sm font-semibold text-gray-700">
+                  {skill.name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div> */}
+        <div className="flex flex-col gap-2 mt-14 px-4">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <div className="inline-block mb-3">
+              <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">
+                Technologies
+              </span>
+            </div>
+            <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-3">
+              Skills Used
+            </h1>
+            <div className="w-16 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 mx-auto rounded-full"></div>
+          </div>
+
+          {/* Skills Grid */}
+          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+            {skills.map((skill, index) => (
+              <div
+                key={index}
+                className={`group ${skill.color} px-5 py-3 rounded-full border-2 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-1 cursor-default`}
+              >
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl group-hover:scale-110 transition-transform duration-300">
+                    {skill.icon}
+                  </span>
+                  <span className="text-sm font-semibold text-gray-700 whitespace-nowrap">
+                    {skill.name}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="flex flex-col gap-2 mt-14">
           <h1 className="text-2xl sm:text-3xl font-bold text-center text-gray-600 mb-5">
             User Website

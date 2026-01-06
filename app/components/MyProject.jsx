@@ -32,7 +32,7 @@ const projects = [
 const MyProject = () => {
   return (
     <div
-      className="w-full px-[12%] pt-10 scroll-mt-20 justify-center items-center mb-20"
+      className="w-full px-[12%] pt-15 scroll-mt-20 justify-center items-center mb-20"
       id="projects"
     >
       <h4 className="text-center mb-2 text-lg">My Portfolio</h4>

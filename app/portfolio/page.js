@@ -3,11 +3,13 @@ import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import Navbar from "../components/Navbar";
+import NavbarPage from "../components/NavbarPage";
+
 const Portfolio = () => {
   return (
     <>
-      <div className="min-h-screen flex flex-col ">
+      <NavbarPage />
+      <div className="min-h-screen flex flex-col pt-18">
         <div className="w-full px-[12%] pt-10 ml-2 scroll-mt-20 flex-1">
           <div className="flex justify-end">
             <Link
