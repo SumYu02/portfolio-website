@@ -12,18 +12,42 @@ import {
   FaReact,
   FaNode,
 } from "react-icons/fa"; // Font Awesome icon
+import { SiMongodb, SiExpress } from "react-icons/si";
 import {
-  SiMysql,
-  SiMongodb,
-  SiPrisma,
-  SiExpress,
-  SiReact,
-  SiNodejs,
-} from "react-icons/si";
+  ShoppingCart,
+  Bot,
+  TrendingDown,
+  MessageSquare,
+  Award,
+} from "lucide-react";
+import GithubSection from "../components/GithubSection";
 
 export default function KeysoundPage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentSlideAdmin, setCurrentSlideAdmin] = useState(0);
+
+  const features = [
+    {
+      icon: <ShoppingCart size={20} />,
+      title: "Recommendation System",
+      description: "AI-powered personalized product suggestions",
+    },
+    {
+      icon: <Bot size={20} />,
+      title: "AI Chatbot",
+      description: "24/7 intelligent customer support",
+    },
+    {
+      icon: <TrendingDown size={20} />,
+      title: "Price-Drop Watch",
+      description: "Real-time price change notifications",
+    },
+    {
+      icon: <MessageSquare size={20} />,
+      title: "Make Offer",
+      description: "Direct price negotiation with sellers",
+    },
+  ];
 
   const slides = [
     {
@@ -163,7 +187,6 @@ export default function KeysoundPage() {
             className="flex flex-row gap-3 items-center px-4 py-2 rounded-full bg-gray-200"
           >
             <FaArrowLeft />
-            {/* <span className="hidden sm:inline">Back to Home</span> */}
           </Link>
         </div>
 
@@ -171,69 +194,106 @@ export default function KeysoundPage() {
           <h1 className="text-4xl font-bold">KeySound</h1>
         </div>
 
-        <div className="flex flex-col gap-2 mt-10 sm:ml-6">
-          <p className="font-bold mt-2">Final Year Project</p>
-          <p className="text-gray-600 max-w-7xl text-justify">
-            This project aims to address these gaps by developing an enhanced
-            e-commerce website using the MERN (MongoDB, Express.js, React.js,
-            Node.js) stack. The system is divided into two main components: a
-            User Website and an Admin Website. The key features implemented in
-            this project include a recommendation system to personalize product
-            suggestions, an AI chatbot for customer support, a price-drop watch
-            function to notify users of changes and a &ldquo;make offer&rdquo;
-            function that allows users to negotiate prices directly with
-            sellers.{" "}
-          </p>
-        </div>
-
-        {/* <div className="flex flex-col gap-2 mt-14">
-          <h1 className="text-2xl sm:text-3xl font-bold text-center text-gray-600 mb-5">
-            Skills Used
-          </h1>
-          <div className="flex flex-wrap gap-2">
-            {skills.map((skill, index) => (
-              <div key={index} className={`${skill.color} p-2 rounded-full`}>
-                {skill.icon}
-                <span className="text-sm font-semibold text-gray-700">
-                  {skill.name}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div> */}
-        <div className="flex flex-col gap-2 mt-14 px-4">
-          {/* Header */}
-          <div className="text-center mb-8">
-            <div className="inline-block mb-3">
-              <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">
-                Technologies
-              </span>
+        <div className="mt-10 sm:ml-6">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="p-2 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg shadow-sm">
+              <Award className="text-blue-600" size={24} />
             </div>
-            <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-3">
-              Skills Used
-            </h1>
-            <div className="w-16 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 mx-auto rounded-full"></div>
+            <div>
+              <p className="text-sm text-blue-600 font-semibold uppercase tracking-wider">
+                Capstone Project
+              </p>
+              <p className="text-2xl font-bold text-gray-800">
+                Final Year Project
+              </p>
+            </div>
           </div>
 
-          {/* Skills Grid */}
-          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-            {skills.map((skill, index) => (
-              <div
-                key={index}
-                className={`group ${skill.color} px-5 py-3 rounded-full border-2 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-1 cursor-default`}
-              >
-                <div className="flex items-center gap-2.5">
-                  <span className="text-xl group-hover:scale-110 transition-transform duration-300">
-                    {skill.icon}
-                  </span>
-                  <span className="text-sm font-semibold text-gray-700 whitespace-nowrap">
-                    {skill.name}
-                  </span>
+          <div className="bg-white rounded-2xl border-2 border-gray-100 shadow-lg p-6 sm:p-8 hover:shadow-xl transition-shadow duration-300">
+            <div className="mb-6">
+              <h3 className="text-lg font-bold text-gray-800 mb-3">
+                Enhanced E-Commerce Platform
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-justify">
+                This project addresses key gaps in modern e-commerce by
+                developing an enhanced platform using the MERN stack. The system
+                features two main components: a User Website and an Admin
+                Website, designed to provide a seamless shopping experience with
+                intelligent automation and personalization.
+              </p>
+            </div>
+
+            {/* Tech Stack */}
+            <div className="mb-6 pb-6 border-b border-gray-100">
+              <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                Tech Stack
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {skills.map((skill, index) => (
+                  <div
+                    key={index}
+                    className={`group ${skill.color} px-5 py-3 rounded-full border-2 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-1 cursor-default`}
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-xl group-hover:scale-110 transition-transform duration-300">
+                        {skill.icon}
+                      </span>
+                      <span className="text-sm font-semibold text-gray-700 whitespace-nowrap">
+                        {skill.name}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Key Features */}
+            <div>
+              <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
+                Key Features
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="group flex items-start gap-3 p-4 bg-gradient-to-br from-gray-50 to-white rounded-xl border-2 border-gray-100 hover:border-blue-200 hover:shadow-md transition-all duration-300"
+                  >
+                    <div className="p-2 bg-white rounded-lg shadow-sm group-hover:shadow-md group-hover:scale-110 transition-all duration-300 border border-gray-100">
+                      <div className="text-blue-600">{feature.icon}</div>
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold text-gray-800 text-sm mb-1">
+                        {feature.title}
+                      </p>
+                      <p className="text-xs text-gray-600">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Project Highlights */}
+            <div className="mt-6 pt-6 border-t border-gray-100">
+              <div className="flex flex-wrap gap-4 text-sm">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="text-gray-600">Full-Stack Development</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+                  <span className="text-gray-600">AI Integration</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-pink-600 rounded-full"></div>
+                  <span className="text-gray-600">Real-time Features</span>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
+
         <div className="flex flex-col gap-2 mt-14">
           <h1 className="text-2xl sm:text-3xl font-bold text-center text-gray-600 mb-5">
             User Website
@@ -352,19 +412,7 @@ export default function KeysoundPage() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 mt-20 mb-20">
-            <h1 className="text-2xl sm:text-3xl font-bold text-center text-gray-600 mb-5">
-              Github Repository
-            </h1>
-            <Link
-              href="https://github.com/SumYu02/E-Commerce-FYP"
-              target="_blank"
-            >
-              <span className="text-gray-500 hover:text-gray-700 text-center flex justify-center">
-                https://github.com/SumYu02/E-Commerce-FYP
-              </span>
-            </Link>
-          </div>
+          <GithubSection />
         </div>
       </div>
       <footer className="mt-16 w-full bg-gray-100 border-t border-gray-200 py-6 flex flex-col items-center text-center text-gray-600 text-sm">
