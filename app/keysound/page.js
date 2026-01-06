@@ -21,6 +21,7 @@ import {
   MessageSquare,
   Award,
 } from "lucide-react";
+import { RiTailwindCssFill } from "react-icons/ri";
 import GithubSection from "../components/GithubSection";
 
 export default function KeysoundPage() {
@@ -146,6 +147,11 @@ export default function KeysoundPage() {
     { name: "Express.js", icon: <SiExpress />, color: "text-slate-700" },
     { name: "React.js", icon: <FaReact />, color: "text-blue-400" },
     { name: "Node.js", icon: <FaNode />, color: "text-green-600" },
+    {
+      name: "Tailwind CSS",
+      icon: <RiTailwindCssFill />,
+      color: "text-teal-500",
+    },
   ];
 
   const highlights = [
@@ -237,16 +243,16 @@ export default function KeysoundPage() {
 
               <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-all duration-300"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 sm:p-3 rounded-full hover:bg-black/70 transition-all duration-300"
               >
-                <FaChevronLeft className="size-3 sm:size-6" />
+                <FaChevronLeft className="size-3 sm:size-5" />
               </button>
 
               <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-all duration-300"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 sm:p-3 rounded-full hover:bg-black/70 transition-all duration-300"
               >
-                <FaChevronRight className="size-3 sm:size-6" />
+                <FaChevronRight className="size-3 sm:size-5" />
               </button>
             </div>
 
@@ -255,7 +261,7 @@ export default function KeysoundPage() {
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                     index === currentSlide
                       ? "bg-black scale-125"
                       : "bg-gray-300 hover:bg-gray-400"
@@ -263,7 +269,6 @@ export default function KeysoundPage() {
                 />
               ))}
             </div>
-
             <div className="text-center mt-4">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
                 {currentSlideData?.title || "Untitled"}
@@ -294,13 +299,13 @@ export default function KeysoundPage() {
 
               <button
                 onClick={prevSlideAdmin}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-all duration-300"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 sm:p-3 rounded-full hover:bg-black/70 transition-all duration-300"
               >
                 <FaChevronLeft className="size-3 sm:size-6" />
               </button>
               <button
                 onClick={nextSlideAdmin}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-all duration-300"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 sm:p-3 rounded-full hover:bg-black/70 transition-all duration-300"
               >
                 <FaChevronRight className="size-3 sm:size-6" />
               </button>

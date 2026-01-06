@@ -4,14 +4,14 @@ import Image from "next/image";
 import { assets } from "@/assets/assets";
 
 const NavbarPage = () => {
-    const sideMenuRef = useRef();
+  const sideMenuRef = useRef();
 
-    const openMenu = () => {
-      sideMenuRef.current.style.transform = "translateX(-16rem)";
-    };
-    const closeMenu = () => {
-      sideMenuRef.current.style.transform = "translateX(16rem)";
-    };
+  const openMenu = () => {
+    sideMenuRef.current.style.transform = "translateX(-16rem)";
+  };
+  const closeMenu = () => {
+    sideMenuRef.current.style.transform = "translateX(16rem)";
+  };
   return (
     <>
       <div className="fixed top-0 right-0 w-full -z-10 translate-y-[-80%]">
@@ -31,42 +31,34 @@ const NavbarPage = () => {
 
           <ul className="hidden md:flex items-center gap-6 lg:gap-8 px-12 py-5 bg-white/40 rounded-full shadow-sm">
             <li>
-              <a href="/#top">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="/#about">About Me</a>
             </li>
             <li>
-              <a href="#projects">My Project</a>
+              <a href="/myproject">My Project</a>
             </li>
-            {/* <li>
-              <Link href="/keysound">My Project</Link>
-            </li> */}
-            {/* <li>
-              <a href="#contact">Contact Me</a>
-            </li> */}
-              <li>
+            <li>
               <a href="/#contact">Contact Me</a>
             </li>
           </ul>
 
+          {/* <div className="flex items-center gap-6"></div> */}
+
           <div className="flex items-center gap-6">
-            {/* <button className="flex items-center">
-              <Image src={assets.moon_icon} alt="" className="w-6" />
-            </button> */}
-            <a
+            {/* <a
               href="https://api.whatsapp.com/send?phone=60194883347"
               className="hidden lg:flex items-center gap-3 border-gray-300 rounded-full border px-8 py-3"
             >
               Contact Me
               <Image src={assets.arrow_icon} className="w-3" alt="arrow" />
-            </a>
+            </a> */}
 
             <button className="block lg:hidden ml-3" onClick={openMenu}>
               <Image src={assets.menu_black} alt="" className="w-6" />
             </button>
           </div>
-
           <ul
             ref={sideMenuRef}
             className="md:hidden flex flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 h-screen bg-gray-50 transition duration-500"

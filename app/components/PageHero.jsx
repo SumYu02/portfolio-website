@@ -7,6 +7,7 @@ import {
     FaNode,
   } from "react-icons/fa"; // Font Awesome icon
   import { SiMongodb, SiExpress } from "react-icons/si";
+  import { RiTailwindCssFill } from "react-icons/ri";
   import {
     ShoppingCart,
     Bot,
