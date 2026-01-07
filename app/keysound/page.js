@@ -200,12 +200,12 @@ export default function KeysoundPage() {
     <>
       <NavbarPage />
       <div className="w-full px-[12%] ml-2 scroll-mt-20 pt-20">
-        <div className="flex justify-end">
+        <div className="flex justify-end mb-6">
           <Link
             href="/"
-            className="flex flex-row gap-3 items-center px-4 py-2 rounded-full bg-gray-200"
+            className="group flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border-2 border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300"
           >
-            <FaArrowLeft />
+            <FaArrowLeft className="group-hover:-translate-x-1 transition-transform duration-300" />
           </Link>
         </div>
 
