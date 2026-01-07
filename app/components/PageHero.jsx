@@ -24,10 +24,10 @@ const PageHero = ({  title,subtitle_1, subtitle_2,description, features, skills,
       </div>
       <div>
         <p className="text-sm text-blue-600 font-semibold uppercase tracking-wider">
-          Capstone Project
+         {subtitle_1}
         </p>
         <p className="text-2xl font-bold text-gray-800">
-          Final Year Project
+       {title}
         </p>
       </div>
     </div>
@@ -35,14 +35,10 @@ const PageHero = ({  title,subtitle_1, subtitle_2,description, features, skills,
     <div className="bg-white rounded-2xl border-2 border-gray-100 shadow-lg p-6 sm:p-8 hover:shadow-xl transition-shadow duration-300">
       <div className="mb-6">
         <h3 className="text-lg font-bold text-gray-800 mb-3">
-          Enhanced E-Commerce Platform
+          {subtitle_2}
         </h3>
-        <p className="text-gray-600 leading-relaxed text-justify">
-          This project addresses key gaps in modern e-commerce by
-          developing an enhanced platform using the MERN stack. The system
-          features two main components: a User Website and an Admin
-          Website, designed to provide a seamless shopping experience with
-          intelligent automation and personalization.
+        <p className="text-gray-600 leading-relaxed text-justify ">
+         {description}
         </p>
       </div>
 

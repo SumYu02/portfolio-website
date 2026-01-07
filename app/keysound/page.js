@@ -216,7 +216,8 @@ export default function KeysoundPage() {
           title="KeySound"
           subtitle_1="E-Commerce"
           subtitle_2="Web Application"
-          description="Built a full-stack e-commerce web application with distinct interfaces for both users and administrators."
+          // description="Built a full-stack e-commerce web application with distinct interfaces for both users and administrators."
+          description="A full-stack MERN e-commerce platform with intelligent features and dedicated user and admin interfaces."
           features={features}
           skills={skills}
           highlights={highlights}
