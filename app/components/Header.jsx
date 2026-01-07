@@ -26,11 +26,18 @@ const Header = () => {
           where I can build more innovative web applications.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-          <a
+          {/* <a
             href="https://api.whatsapp.com/send?phone=60194883347"
             className="bg-black text-white border border-gray-500 rounded-full px-10 py-3 flex items-center gap-2"
           >
             Contact Me
+            <Image src={assets.right_arrow_white} alt="" className="w-4" />
+          </a> */}
+          <a
+            href="/#projects"
+            className="bg-black text-white border border-gray-500 rounded-full px-10 py-3 flex items-center gap-2"
+          >
+            View Project
             <Image src={assets.right_arrow_white} alt="" className="w-4" />
           </a>
 

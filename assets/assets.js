@@ -72,6 +72,7 @@ import fancy_page3 from "./fancy-currency-table.png";
 import fancy_page4 from "./fancy-about-me.png";
 import scoreboard_page1 from "./scoreboard-home.png";
 import profile_image_animated from "./profile-image-anime.png";
+import portfolio_home from "./portfolio-home.png";
 
 export const assets = {
   user_image,
