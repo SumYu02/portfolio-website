@@ -4,12 +4,13 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="md:pt-25 mx-auto h-screen flex flex-col gap-4 items-center justify-center max-w-3xl w-11/12">
-      <div className="flex flex-col justify-center items-center gap-2 sm:gap-4 ">
+    <div className="sm:pt-25 mx-auto h-screen flex flex-col gap-4 items-center justify-center max-w-3xl w-11/12">
+      <div className="flex flex-col justify-center items-center gap-4 sm:gap-4 ">
         <Image
-          src={assets.picofme_image}
-          alt=""
-          className="rounded-full w-36"
+          // src={assets.picofme_image}
+          src={assets.profile_image_animated}
+          alt="profile image"
+          className="rounded-full w-38"
         />
 
         <h3 className=" flex items-end gap-2 text-xl md:text-2xl ">
@@ -25,11 +26,18 @@ const Header = () => {
           where I can build more innovative web applications.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-          <a
+          {/* <a
             href="https://api.whatsapp.com/send?phone=60194883347"
             className="bg-black text-white border border-gray-500 rounded-full px-10 py-3 flex items-center gap-2"
           >
             Contact Me
+            <Image src={assets.right_arrow_white} alt="" className="w-4" />
+          </a> */}
+          <a
+            href="/#projects"
+            className="bg-black text-white border border-gray-500 rounded-full px-10 py-3 flex items-center gap-2"
+          >
+            View Project
             <Image src={assets.right_arrow_white} alt="" className="w-4" />
           </a>
 

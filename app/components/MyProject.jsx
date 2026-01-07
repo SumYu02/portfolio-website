@@ -3,6 +3,31 @@ import React from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import Link from "next/link";
+import { CiCircleChevDown } from "react-icons/ci";
+
+// const projects = [
+//   {
+//     title: "KeySound",
+//     description:
+//       "Built a full-stack e-commerce web application with distinct interfaces for both users and administrators.",
+//     image: assets.keysound_user,
+//     path: "/keysound",
+//   },
+//   {
+//     title: "Score Board",
+//     description: "A simple typing game with a scoreboard, user profiles, and history.",
+//     image: assets.scoreboard_page1,
+//     path: "/scoreboard",
+//   },
+//   {
+//     title: "Fancy",
+//     description:
+//       "A token swap interface that allows users to exchange assets quickly and easily.",
+//     image: assets.fancy_page1,
+//     path: "/portfolio",
+//   },
+//   // Add more projects here
+// ];
 
 const projects = [
   {
@@ -22,7 +47,7 @@ const projects = [
     title: "Portfolio Website",
     description:
       "Built with modern web technologies to highlight projects, resume, and contact information.",
-    image: assets.portfolio_image,
+    image: assets.portfolio_home,
     path: "/portfolio",
   },
   // Add more projects here
@@ -31,7 +56,7 @@ const projects = [
 const MyProject = () => {
   return (
     <div
-      className="w-full px-[12%] pt-10 scroll-mt-20 justify-center items-center mb-20"
+      className="w-full px-[12%] pt-15 scroll-mt-20 justify-center items-center mb-20"
       id="projects"
     >
       <h4 className="text-center mb-2 text-lg">My Portfolio</h4>
@@ -47,7 +72,7 @@ const MyProject = () => {
             <Image
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover rounded-lg"
+              className="w-full h-48 object-contain rounded-lg"
             />
 
             {project.path ? (
@@ -98,6 +123,13 @@ const MyProject = () => {
           </div>
         ))}
       </div>
+      
+      {/* <div className="flex justify-center items-center">
+      <Link href="/myproject" className=" hover:underline text-blue-600 hover:text-blue-800  cursor-pointer mt-4 inline-block  px-6 py-2 rounded-full text-center ">
+      <CiCircleChevDown className="w-12 h-12 text-slate-700 animate-bounce mx-auto mt-4" />
+      </Link>
+      </div> */}
+   
     </div>
   );
 };

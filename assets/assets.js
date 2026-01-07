@@ -66,6 +66,13 @@ import cursor_logo from "./cursor-logo.png";
 import pomodoro_logo from "./pomodoro-logo.jpg";
 import portfolio_image from "./portfolio-image.png";
 import code_structure from "./code_structure.png";
+import fancy_page1 from "./fancy-home-page.png";
+import fancy_page2 from "./fancy-swap-page.png";
+import fancy_page3 from "./fancy-currency-table.png";
+import fancy_page4 from "./fancy-about-me.png";
+import scoreboard_page1 from "./scoreboard-home.png";
+import profile_image_animated from "./profile-image-anime.png";
+import portfolio_home from "./portfolio-home.png";
 
 export const assets = {
   user_image,
@@ -136,6 +143,12 @@ export const assets = {
   pomodoro_logo,
   portfolio_image,
   code_structure,
+  fancy_page1,
+  fancy_page2,
+  fancy_page3,
+  fancy_page4,
+  scoreboard_page1,
+  profile_image_animated,
 };
 
 export const workData = [

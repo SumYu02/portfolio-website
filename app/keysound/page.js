@@ -1,15 +1,55 @@
 "use client";
 import React from "react";
-import Navbar from "../components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
-import { assets } from "@/assets/assets";
-import { FaArrowLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Font Awesome icon
 import { useState } from "react";
+import { assets } from "@/assets/assets";
+import NavbarPage from "../components/NavbarPage";
+import PageHero from "../components/PageHero";
+import {
+  FaArrowLeft,
+  FaChevronLeft,
+  FaChevronRight,
+  FaReact,
+  FaNode,
+} from "react-icons/fa"; // Font Awesome icon
+import { SiMongodb, SiExpress } from "react-icons/si";
+import {
+  ShoppingCart,
+  Bot,
+  TrendingDown,
+  MessageSquare,
+  Award,
+} from "lucide-react";
+import { RiTailwindCssFill } from "react-icons/ri";
+import GithubSection from "../components/GithubSection";
 
 export default function KeysoundPage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentSlideAdmin, setCurrentSlideAdmin] = useState(0);
+
+  const features = [
+    {
+      icon: <ShoppingCart size={20} />,
+      title: "Recommendation System",
+      description: "AI-powered personalized product suggestions",
+    },
+    {
+      icon: <Bot size={20} />,
+      title: "AI Chatbot",
+      description: "24/7 intelligent customer support",
+    },
+    {
+      icon: <TrendingDown size={20} />,
+      title: "Price-Drop Watch",
+      description: "Real-time price change notifications",
+    },
+    {
+      icon: <MessageSquare size={20} />,
+      title: "Make Offer",
+      description: "Direct price negotiation with sellers",
+    },
+  ];
 
   const slides = [
     {
@@ -102,6 +142,30 @@ export default function KeysoundPage() {
     },
   ];
 
+  const skills = [
+    { name: "MongoDB", icon: <SiMongodb />, color: "text-blue-600" },
+    { name: "Express.js", icon: <SiExpress />, color: "text-slate-700" },
+    { name: "React.js", icon: <FaReact />, color: "text-blue-400" },
+    { name: "Node.js", icon: <FaNode />, color: "text-green-600" },
+    {
+      name: "Tailwind CSS",
+      icon: <RiTailwindCssFill />,
+      color: "text-teal-500",
+    },
+  ];
+
+  const highlights = [
+    {
+      title: "Full-Stack Development",
+    },
+    {
+      title: "AI Integration",
+    },
+    {
+      title: "Real-time Features",
+    },
+  ];
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
@@ -134,35 +198,30 @@ export default function KeysoundPage() {
 
   return (
     <>
-      <div className="w-full px-[12%] pt-10 ml-2 scroll-mt-20">
-        <div className="flex justify-end">
+      <NavbarPage />
+      <div className="w-full px-[12%] ml-2 scroll-mt-20 pt-20">
+        <div className="flex justify-end mb-6">
           <Link
             href="/"
-            className="flex flex-row gap-3 items-center px-4 py-2 rounded-full bg-gray-200"
+            className="group flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border-2 border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300"
           >
-            <FaArrowLeft />
-            <span className="hidden sm:inline">Back to Home</span>
+            <FaArrowLeft className="group-hover:-translate-x-1 transition-transform duration-300" />
           </Link>
         </div>
 
         <div>
           <h1 className="text-4xl font-bold">KeySound</h1>
         </div>
-
-        <div className="flex flex-col gap-2 mt-10 sm:ml-6">
-          <p className="font-bold mt-2">Final Year Project</p>
-          <p className="text-gray-600 max-w-7xl text-justify">
-            This project aims to address these gaps by developing an enhanced
-            e-commerce website using the MERN (MongoDB, Express.js, React.js,
-            Node.js) stack. The system is divided into two main components: a
-            User Website and an Admin Website. The key features implemented in
-            this project include a recommendation system to personalize product
-            suggestions, an AI chatbot for customer support, a price-drop watch
-            function to notify users of changes and a &ldquo;make offer&rdquo;
-            function that allows users to negotiate prices directly with
-            sellers.{" "}
-          </p>
-        </div>
+        <PageHero
+          title="KeySound"
+          subtitle_1="E-Commerce"
+          subtitle_2="Web Application"
+          // description="Built a full-stack e-commerce web application with distinct interfaces for both users and administrators."
+          description="A full-stack MERN e-commerce platform with intelligent features and dedicated user and admin interfaces."
+          features={features}
+          skills={skills}
+          highlights={highlights}
+        />
 
         <div className="flex flex-col gap-2 mt-14">
           <h1 className="text-2xl sm:text-3xl font-bold text-center text-gray-600 mb-5">
@@ -185,16 +244,16 @@ export default function KeysoundPage() {
 
               <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-all duration-300"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 sm:p-3 rounded-full hover:bg-black/70 transition-all duration-300"
               >
-                <FaChevronLeft className="size-3 sm:size-6" />
+                <FaChevronLeft className="size-3 sm:size-5" />
               </button>
 
               <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-all duration-300"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 sm:p-3 rounded-full hover:bg-black/70 transition-all duration-300"
               >
-                <FaChevronRight className="size-3 sm:size-6" />
+                <FaChevronRight className="size-3 sm:size-5" />
               </button>
             </div>
 
@@ -203,7 +262,7 @@ export default function KeysoundPage() {
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                     index === currentSlide
                       ? "bg-black scale-125"
                       : "bg-gray-300 hover:bg-gray-400"
@@ -211,7 +270,6 @@ export default function KeysoundPage() {
                 />
               ))}
             </div>
-
             <div className="text-center mt-4">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
                 {currentSlideData?.title || "Untitled"}
@@ -242,13 +300,13 @@ export default function KeysoundPage() {
 
               <button
                 onClick={prevSlideAdmin}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-all duration-300"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 sm:p-3 rounded-full hover:bg-black/70 transition-all duration-300"
               >
                 <FaChevronLeft className="size-3 sm:size-6" />
               </button>
               <button
                 onClick={nextSlideAdmin}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-all duration-300"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 sm:p-3 rounded-full hover:bg-black/70 transition-all duration-300"
               >
                 <FaChevronRight className="size-3 sm:size-6" />
               </button>
@@ -282,19 +340,7 @@ export default function KeysoundPage() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 mt-20 mb-20">
-            <h1 className="text-2xl sm:text-3xl font-bold text-center text-gray-600 mb-5">
-              Github Repository
-            </h1>
-            <Link
-              href="https://github.com/SumYu02/E-Commerce-FYP"
-              target="_blank"
-            >
-              <span className="text-gray-500 hover:text-gray-700 text-center flex justify-center">
-                https://github.com/SumYu02/E-Commerce-FYP
-              </span>
-            </Link>
-          </div>
+          <GithubSection />
         </div>
       </div>
       <footer className="mt-16 w-full bg-gray-100 border-t border-gray-200 py-6 flex flex-col items-center text-center text-gray-600 text-sm">
