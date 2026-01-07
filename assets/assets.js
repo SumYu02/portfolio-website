@@ -149,6 +149,7 @@ export const assets = {
   fancy_page4,
   scoreboard_page1,
   profile_image_animated,
+  portfolio_home,
 };
 
 export const workData = [
