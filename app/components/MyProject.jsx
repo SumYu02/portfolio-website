@@ -19,13 +19,19 @@ const projects = [
     image: assets.scoreboard_page1,
     path: "/scoreboard",
   },
+  // {
+  //   title: "Fancy",
+  //   description:
+  //     "A token swap interface that allows users to exchange assets quickly and easily.",
+  //   image: assets.fancy_page1,
+  //   path: "/portfolio",
+  // },
   {
-    title: "Fancy",
-    description:
-      "A token swap interface that allows users to exchange assets quickly and easily.",
-    image: assets.fancy_page1,
-    path: "/portfolio",
-  },
+        title: "Pomotask",
+        description: "Study Planner & Task Manager with Pomodoro Application.",
+      image: assets.pomodoro_logo,
+       path: "/pomotask",
+  }, 
   // Add more projects here
 ];
 
