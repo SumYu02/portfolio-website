@@ -110,7 +110,7 @@ const page = () => {
               assets.score_game_6,
             ]}
             autoPlay={true}
-            autoPlayInterval={3000}
+            autoPlayInterval={1500}
           />
         </div>
 
@@ -135,7 +135,7 @@ const page = () => {
                 assets.score_game6_dark,
               ]}
               autoPlay={true}
-              autoPlayInterval={3000}
+              autoPlayInterval={1500}
             />
           </div>
         </div>
