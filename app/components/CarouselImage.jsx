@@ -14,36 +14,45 @@ const CarouselImage = ({
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImageIndex, setModalImageIndex] = useState(0);
+  const [isInteracting, setIsInteracting] = useState(false);
 
   // Auto-play functionality
   useEffect(() => {
-    if (autoPlay && images.length > 0) {
-      const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % images.length);
-      }, autoPlayInterval);
-      return () => clearInterval(interval);
+    if (!autoPlay || images.length <= 1 || isModalOpen || isInteracting) {
+      return;
     }
-  }, [autoPlay, autoPlayInterval, images.length]);
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, autoPlayInterval);
+
+    return () => clearInterval(interval);
+  }, [autoPlay, autoPlayInterval, images.length, isModalOpen, isInteracting]);
 
   const nextSlide = () => {
+    setIsInteracting(true);
     setCurrentSlide((prev) => (prev + 1) % images.length);
   };
 
   const prevSlide = () => {
+    setIsInteracting(true);
     setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
   };
 
   const goToSlide = (index) => {
+    setIsInteracting(true);
     setCurrentSlide(index);
   };
 
   const openModal = (index) => {
     setModalImageIndex(index);
     setIsModalOpen(true);
+    setIsInteracting(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
+    setIsInteracting(false);
   };
 
   const nextModalImage = () => {
@@ -71,6 +80,17 @@ const CarouselImage = ({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isModalOpen, images.length]);
 
+  // Reset isInteracting after user stops interacting
+  useEffect(() => {
+    if (!isInteracting) return;
+
+    const timeout = setTimeout(() => {
+      setIsInteracting(false);
+    }, autoPlayInterval * 2); // resume after inactivity
+
+    return () => clearTimeout(timeout);
+  }, [isInteracting, autoPlayInterval]);
+
   if (!images || images.length === 0) {
     return (
       <div className="w-full h-64 bg-gray-200 flex items-center justify-center rounded-lg">
@@ -83,7 +103,11 @@ const CarouselImage = ({
 
   return (
     <>
-      <div className={`relative max-w-6xl mx-auto ${className}`}>
+      <div
+        className={`relative max-w-6xl mx-auto ${className}`}
+        onMouseEnter={() => setIsInteracting(true)}
+        onMouseLeave={() => setIsInteracting(false)}
+      >
         <div className="relative group flex transition-transform duration-500 ease-in-out">
           {currentImage ? (
             <div

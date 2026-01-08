@@ -109,15 +109,38 @@ const page = () => {
               assets.score_game_5,
               assets.score_game_6,
             ]}
+            autoPlay={true}
+            autoPlayInterval={3000}
           />
+        </div>
+
+        <div className="mt-20 gap-2 text-center">
+          <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-zinc-100 via-slate-700 to-neutral-100 bg-clip-text text-transparent mb-3">
+            Dark Mode
+          </h1>
+
+          <div className="mt-12">
+            <CarouselImage
+              images={[
+                assets.score_home_dark,
+                assets.score_board_dark,
+                assets.score_history_dark,
+                assets.score_profile_dark,
+                assets.score_about_dark,
+                assets.score_game1_dark,
+                assets.score_game2_dark,
+                assets.score_game3_dark,
+                assets.score_game4_dark,
+                assets.score_game5_dark,
+                assets.score_game6_dark,
+              ]}
+              autoPlay={true}
+              autoPlayInterval={3000}
+            />
+          </div>
         </div>
       </div>
 
-      <div className="mt-20 gap-2 text-center">
-        <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-zinc-100 via-slate-700 to-neutral-100 bg-clip-text text-transparent mb-3">
-          Dark Mode
-        </h1>
-      </div>
       {/* Footer */}
       <footer className="mt-20 w-full bg-gradient-to-r from-gray-50 to-gray-100 border-t-2 border-gray-200 py-8">
         <div className="max-w-7xl mx-auto px-4 text-center">

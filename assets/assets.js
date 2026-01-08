@@ -84,6 +84,17 @@ import score_game_3 from "./score_game3.png";
 import score_game_4 from "./score_game4.png";
 import score_game_5 from "./score_game5.png";
 import score_game_6 from "./score_game6.png";
+import score_home_dark from "./score_home_dark.png";
+import score_board_dark from "./score_board_dark.png";
+import score_history_dark from "./score_history_dark.png";
+import score_profile_dark from "./score_profile_dark.png";
+import score_about_dark from "./score_about_dark.png";
+import score_game1_dark from "./score_game1_dark.png";
+import score_game2_dark from "./score_game2_dark.png";
+import score_game3_dark from "./score_game3_dark.png";
+import score_game4_dark from "./score_game4_dark.png";
+import score_game5_dark from "./score_game5_dark.png";
+import score_game6_dark from "./score_game6_dark.png";
 
 export const assets = {
   user_image,
@@ -172,6 +183,17 @@ export const assets = {
   score_game_4,
   score_game_5,
   score_game_6,
+  score_home_dark,
+  score_board_dark,
+  score_history_dark,
+  score_profile_dark,
+  score_about_dark,
+  score_game1_dark,
+  score_game2_dark,
+  score_game3_dark,
+  score_game4_dark,
+  score_game5_dark,
+  score_game6_dark,
 };
 
 export const workData = [
