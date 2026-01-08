@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
@@ -9,6 +10,7 @@ import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { Code2, Layers } from "lucide-react";
 
 const Portfolio = () => {
+  const router = useRouter();
   const skills = [
     { name: "Next.js", icon: <RiNextjsLine />, color: "text-slate-700" },
     {
@@ -24,18 +26,18 @@ const Portfolio = () => {
       <div className="min-h-screen flex flex-col pt-18 bg-white">
         <div className="w-full px-4 sm:px-[8%] lg:px-[12%] pt-10 scroll-mt-20 flex-1">
           <div className="flex justify-end mb-6">
-            <Link
-              href="/"
+            <button
+              onClick={() => router.back()}
               className="group flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border-2 border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300"
             >
               <FaArrowLeft className="group-hover:-translate-x-1 transition-transform duration-300" />
-            </Link>
+            </button>
           </div>
 
           <PageHero
             title="Portfolio Website"
             subtitle_1="Portfolio"
-            subtitle_2="Website"
+            subtitle_2="Web Application"
             description="Showcases projects, skills and experience in a clean, professional portfolio."
             skills={skills}
           />
