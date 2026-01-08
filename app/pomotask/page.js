@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import NavbarPage from "../components/NavbarPage";
@@ -11,6 +11,7 @@ import { FaArrowLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Timer, BarChart, CheckSquare, Bell, Users } from "lucide-react";
 
 const Pomotask = () => {
+  const router = useRouter();
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
@@ -59,7 +60,7 @@ const Pomotask = () => {
     {
       icon: <CheckSquare size={20} />,
       title: "Task Management",
-      description: "Create, organize, and manage daily tasks",
+      description: "Create, organize and manage daily tasks",
     },
     {
       icon: <Bell size={20} />,
@@ -103,12 +104,12 @@ const Pomotask = () => {
       <div className="min-h-screen flex flex-col pt-18">
         <div className="w-full px-[12%] pt-10 ml-2 scroll-mt-20 flex-1">
           <div className="flex justify-end mb-6">
-            <Link
-              href="/"
+            <button
+              onClick={() => router.back()}
               className="group flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border-2 border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300"
             >
               <FaArrowLeft className="group-hover:-translate-x-1 transition-transform duration-300" />
-            </Link>
+            </button>
           </div>
 
           <div>
@@ -117,7 +118,7 @@ const Pomotask = () => {
             <PageHero
               title="Pomotask"
               subtitle_1="Study Planner"
-              subtitle_2="Task Manager"
+              subtitle_2="Task Manager Application"
               description="Study Planner and Task Manager with Pomodoro Application."
               features={features}
               skills={skills}

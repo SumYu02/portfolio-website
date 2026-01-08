@@ -4,7 +4,7 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import Link from "next/link";
 import NavbarPage from "../components/NavbarPage";
-
+import Footer from "../components/Footer";
 const projects = [
   {
     title: "KeySound",
@@ -16,16 +16,16 @@ const projects = [
   {
     title: "Score Board",
     description:
-      "A simple typing game with a scoreboard, user profiles, and history.",
+      "A simple typing game with a scoreboard, user profiles and history.",
     image: assets.scoreboard_page1,
     path: "/scoreboard",
   },
   {
     title: "Fancy",
     description:
-      "A token swap interface that allows users to exchange assets quickly and easily.",
+      "A token swap interface that allows users to exchange assets quickly and easily. (Coming Soon)",
     image: assets.fancy_page1,
-    path: "/portfolio",
+    // path: "/portfolio",
   },
   {
     title: "Pomotask",
@@ -36,7 +36,7 @@ const projects = [
   {
     title: "Portfolio Website",
     description:
-      "Built with modern web technologies to highlight projects, resume, and contact information.",
+      "Built with modern web technologies to highlight projects, resume and contact information.",
     image: assets.portfolio_image,
     path: "/portfolio",
   },
@@ -50,7 +50,7 @@ const page = () => {
         className="w-full px-[12%] pt-20 scroll-mt-20 justify-center items-center mb-20"
         id="projects"
       >
-        <h4 className="text-center mb-2 text-lg">My Portfolio</h4>
+        <h4 className="text-center sm:mt-10 mb-2 text-lg">My Portfolio</h4>
         <h2 className="text-center text-4xl font-bold mb-10">
           My Latest Projects
         </h2>
@@ -107,13 +107,14 @@ const page = () => {
                   View Project
                 </a>
               ) : (
-                <span className="mt-4 inline-block bg-black text-white px-6 py-2 rounded-full text-center hover:bg-gray-800 transition">
-                  View Project
+                <span className="mt-4 inline-block bg-gray-200 text-gray-600 px-6 py-2 rounded-full text-center hover:bg-gray-800 transition">
+                  Coming Soon
                 </span>
               )}
             </div>
           ))}
         </div>
+        <Footer />
       </div>
     </>
   );

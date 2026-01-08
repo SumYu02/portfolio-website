@@ -1,5 +1,5 @@
-import React from 'react';
-import { Github, ExternalLink, Star, GitFork, Code } from 'lucide-react';
+import React from "react";
+import { Github, ExternalLink, Star, GitFork, Code } from "lucide-react";
 
 export default function GitHubSection() {
   return (
@@ -11,7 +11,7 @@ export default function GitHubSection() {
             Open Source
           </span>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-3">
+        <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-indigo-600 via-blue-600 to-sky-500 bg-clip-text text-transparent mb-3">
           GitHub Repository
         </h1>
         <p className="text-gray-600 text-sm max-w-xl mx-auto">
@@ -29,25 +29,35 @@ export default function GitHubSection() {
         >
           <div className="bg-white rounded-2xl border-2 border-gray-100 shadow-lg hover:shadow-2xl hover:border-blue-200 transition-all duration-500 overflow-hidden">
             {/* Gradient Header */}
-            <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-6">
+            <div
+              className="bg-gradient-to-r from-indigo-600 via-blue-600 to-sky-500
+ p-6"
+            >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-white rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <Github className="text-gray-800" size={32} />
                   </div>
                   <div>
-                    <p className="text-white font-bold text-xl">E-Commerce-FYP</p>
+                    <p className="text-white font-bold text-xl">
+                      E-Commerce-FYP
+                    </p>
                     <p className="text-blue-100 text-sm">SumYu02</p>
                   </div>
                 </div>
-                <ExternalLink className="text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" size={24} />
+                <ExternalLink
+                  className="text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
+                  size={24}
+                />
               </div>
             </div>
 
             {/* Content */}
             <div className="p-6">
               <p className="text-gray-600 text-sm mb-6">
-                Full-stack MERN e-commerce platform with AI-powered features including recommendation system, chatbot, price-drop alerts, and offer negotiation.
+                Full-stack MERN e-commerce platform with AI-powered features
+                including recommendation system, chatbot, price-drop alerts, and
+                offer negotiation.
               </p>
 
               {/* Stats */}
@@ -74,14 +84,17 @@ export default function GitHubSection() {
                   </code>
                   <div className="flex items-center gap-2 text-blue-600 font-semibold text-sm whitespace-nowrap">
                     View Code
-                    <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+                    <ExternalLink
+                      size={16}
+                      className="group-hover:translate-x-1 transition-transform duration-300"
+                    />
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Bottom Accent */}
-            <div className="h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 group-hover:h-2 transition-all duration-300"></div>
+            <div className="h-1 bg-gradient-to-r from-indigo-100 via-blue-600 to-sky-400 group-hover:h-2 transition-all duration-300"></div>
           </div>
         </a>
 
