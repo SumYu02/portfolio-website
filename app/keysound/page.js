@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useState } from "react";
 import { assets } from "@/assets/assets";
@@ -25,6 +25,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import GithubSection from "../components/GithubSection";
 
 export default function KeysoundPage() {
+  const router = useRouter();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentSlideAdmin, setCurrentSlideAdmin] = useState(0);
 
@@ -201,16 +202,16 @@ export default function KeysoundPage() {
       <NavbarPage />
       <div className="w-full px-[12%] ml-2 scroll-mt-20 pt-20">
         <div className="flex justify-end mb-6">
-          <Link
-            href="/"
+          <button
+            onClick={() => router.back()}
             className="group flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border-2 border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300"
           >
             <FaArrowLeft className="group-hover:-translate-x-1 transition-transform duration-300" />
-          </Link>
+          </button>
         </div>
 
         <div>
-          <h1 className="text-4xl font-bold">KeySound</h1>
+          <h1 className="text-4xl font-bold ">KeySound</h1>
         </div>
         <PageHero
           title="KeySound"
