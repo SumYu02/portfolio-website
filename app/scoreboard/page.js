@@ -4,11 +4,12 @@ import NavbarPage from "../components/NavbarPage";
 import PageHero from "../components/PageHero";
 import { useRouter } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
-import { ShoppingCart, Bot, TrendingDown, MessageSquare } from "lucide-react";
-import { SiMongodb, SiExpress, SiShadcnui, SiPrisma } from "react-icons/si";
+import { SiExpress, SiShadcnui, SiPrisma } from "react-icons/si";
 import { FaReact, FaNode } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { Keyboard, User, BarChart2, History } from "lucide-react";
+import CarouselImage from "../components/CarouselImage";
+import { assets } from "@/assets/assets";
 
 const page = () => {
   const router = useRouter();
@@ -22,13 +23,12 @@ const page = () => {
     {
       icon: <User size={20} />,
       title: "User Profiles",
-      description:
-        "Personal profiles with performance stats and progress tracking",
+      description: "Personal profiles with individual score displays.",
     },
     {
       icon: <BarChart2 size={20} />,
       title: "Scoreboard",
-      description: "Global rankings based on typing performance",
+      description: "Global rankings based on score",
     },
     {
       icon: <History size={20} />,
@@ -78,12 +78,54 @@ const page = () => {
           subtitle_1="Typing Game"
           subtitle_2="Web Application"
           // description="Built a full-stack e-commerce web application with distinct interfaces for both users and administrators."
-          description="A full-stack MERN e-commerce platform with intelligent features and dedicated user and admin interfaces."
+          description="Score Board is a typing game website built with a modern UI and a backend powered by Prisma, created to explore a new database experience. It also features theme switching with light and dark modes."
           features={features}
           skills={skills}
           highlights={highlights}
         />
+        <div className="mt-20 gap-2 text-center">
+          <div className="inline-block mb-3">
+            <span className="text-xs font-semibold text-gray-600 uppercase tracking-wider">
+              Interface Design
+            </span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-zinc-100 via-slate-700 to-neutral-100 bg-clip-text text-transparent mb-3">
+            Light Mode
+          </h1>
+        </div>
+
+        <div className="mt-12">
+          <CarouselImage
+            images={[
+              assets.score_home,
+              assets.score_board,
+              assets.score_history,
+              assets.score_profile,
+              assets.score_about,
+              assets.score_game_1,
+              assets.score_game_2,
+              assets.score_game_3,
+              assets.score_game_4,
+              assets.score_game_5,
+              assets.score_game_6,
+            ]}
+          />
+        </div>
       </div>
+
+      <div className="mt-20 gap-2 text-center">
+        <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-zinc-100 via-slate-700 to-neutral-100 bg-clip-text text-transparent mb-3">
+          Dark Mode
+        </h1>
+      </div>
+      {/* Footer */}
+      <footer className="mt-20 w-full bg-gradient-to-r from-gray-50 to-gray-100 border-t-2 border-gray-200 py-8">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <div className="text-gray-600 font-medium">
+            &copy; {new Date().getFullYear()} Sum Yu. All rights reserved.
+          </div>
+        </div>
+      </footer>
     </>
   );
 };

@@ -73,6 +73,17 @@ import fancy_page4 from "./fancy-about-me.png";
 import scoreboard_page1 from "./scoreboard-home.png";
 import profile_image_animated from "./profile-image-anime.png";
 import portfolio_home from "./portfolio-home.png";
+import score_home from "./score_home.png";
+import score_board from "./score_board.png";
+import score_history from "./score_history.png";
+import score_profile from "./score_profile.png";
+import score_about from "./score_about.png";
+import score_game_1 from "./score_game1.png";
+import score_game_2 from "./score_game2.png";
+import score_game_3 from "./score_game3.png";
+import score_game_4 from "./score_game4.png";
+import score_game_5 from "./score_game5.png";
+import score_game_6 from "./score_game6.png";
 
 export const assets = {
   user_image,
@@ -150,6 +161,17 @@ export const assets = {
   scoreboard_page1,
   profile_image_animated,
   portfolio_home,
+  score_home,
+  score_board,
+  score_history,
+  score_profile,
+  score_about,
+  score_game_1,
+  score_game_2,
+  score_game_3,
+  score_game_4,
+  score_game_5,
+  score_game_6,
 };
 
 export const workData = [
