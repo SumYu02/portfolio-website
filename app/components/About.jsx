@@ -14,10 +14,13 @@ import {
   SiPrisma,
   SiGithub,
   SiExpress,
+  SiRedux,
+  SiReactquery,
 } from "react-icons/si";
 import { RiNextjsLine } from "react-icons/ri";
 import { GrTechnology } from "react-icons/gr";
 import { TbBrandReactNative } from "react-icons/tb";
+import { GiBrain } from "react-icons/gi";
 
 const About = () => {
   const skillCategories = [
@@ -83,6 +86,27 @@ const About = () => {
         { name: "MySQL", icon: <SiMysql />, color: "text-blue-600" },
         { name: "MongoDB", icon: <SiMongodb />, color: "text-green-600" },
         { name: "Prisma", icon: <SiPrisma />, color: "text-slate-700" },
+      ],
+    },
+    {
+      title: "State Management & Data Fetching",
+      icon: <GiBrain className="w-6 h-6" />,
+      skills: [
+        {
+          name: "Zustand",
+          icon: <GiBrain />,
+          color: "text-emerald-600",
+        },
+        {
+          name: "TanStack Query",
+          icon: <SiReactquery />,
+          color: "text-rose-600",
+        },
+        {
+          name: "Redux",
+          icon: <SiRedux />,
+          color: "text-purple-600",
+        },
       ],
     },
   ];
