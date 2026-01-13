@@ -5,6 +5,7 @@ import About from "./components/About";
 import MyProject from "./components/MyProject";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <MyProject />
       <Contact />
       <Footer />
+      <Analytics />
     </>
   );
 }
