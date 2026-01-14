@@ -82,6 +82,8 @@ const page = () => {
           features={features}
           skills={skills}
           highlights={highlights}
+          website_link="https://score-board-website-tau.vercel.app/"
+          github_link="https://github.com/SumYu02/Score-Board-Website"
         />
         <div className="mt-20 gap-2 text-center">
           <div className="inline-block mb-3">

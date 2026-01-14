@@ -9,6 +9,8 @@ const PageHero = ({
   features,
   skills,
   highlights,
+  website_link,
+  github_link,
 }) => {
   return (
     <div className="mt-10 sm:ml-6">
@@ -31,6 +33,38 @@ const PageHero = ({
             {description}
           </p>
         </div>
+
+        {website_link ? (
+  <div className="mb-6">
+    <p className="text-sm font-semibold text-gray-500 tracking-wider mb-3">
+      <span className="uppercase">Website Link:</span>{" "}
+      <a
+        href={website_link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600"
+      >
+        {website_link}
+      </a>
+    </p>
+  </div>
+) : null}
+
+{github_link ? (
+  <div className="mb-6">
+    <p className="text-sm font-semibold text-gray-500 tracking-wider mb-3">
+      <span className="uppercase">Github Link:</span>{" "}
+      <a
+        href={github_link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600"
+      >
+        {github_link}
+      </a>
+    </p>
+  </div>
+) : null}
 
         {/* Tech Stack */}
         <div className="mb-6 pb-6 border-b border-gray-100">

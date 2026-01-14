@@ -65,7 +65,8 @@ const page = () => {
           description="Fancy is a token swap interface that allows users to exchange assets quickly and easily. It is built with a modern UI using React and Tailwind CSS, with swap logic and exchange rates hardcoded for demonstration purposes."
           features={features}
           skills={skills}
-          // highlights={highlights}
+          website_link="https://fancy-currency-converter.vercel.app/"
+          github_link="https://github.com/SumYu02/fancy-currency-converter"
         />
         <div className="mt-20 gap-2 text-center">
           <h1 className="text-3xl sm:text-4xl font-bold mb-3">
