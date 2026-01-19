@@ -25,7 +25,7 @@ const projects = [
     description:
       "A token swap interface that allows users to exchange assets quickly and easily.",
     image: assets.fancy_page1,
-    path: "/portfolio",
+    path: "/fancy",
   },
 ];
 
